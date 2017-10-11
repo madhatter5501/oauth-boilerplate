@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
-using IdentityServer4;
 using IdentityServer4.Models;
 
 namespace Boilerplate.OAuth
 {
+    /// <summary>
+    /// Used to configure in-memory settings for testing
+    /// </summary>
     public class Config
     {
         public static IEnumerable<IdentityResource> IdentityResources()
@@ -29,9 +31,8 @@ namespace Boilerplate.OAuth
             {
                 new Client
                 {
-                    ClientId = "consoleapp",
+                    ClientId = "consoleapptoken",
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
-
                     ClientSecrets =
                     {
                         new Secret("super-secret-key".Sha256())

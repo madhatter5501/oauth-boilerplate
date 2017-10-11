@@ -6,6 +6,9 @@ using Newtonsoft.Json.Linq;
 
 namespace Boilerplate.TestConsole
 {
+    /// <summary>
+    /// Requests a token from our OAuth server and uses response to call our API
+    /// </summary>
     internal class Program
     {
         public static void Main(string[] args) => MainAsync().GetAwaiter().GetResult();
@@ -18,7 +21,7 @@ namespace Boilerplate.TestConsole
             var discoveryResponse = await DiscoveryClient.GetAsync("http://localhost:5000");
 
             // Request token
-            var tokenClient = new TokenClient(discoveryResponse.TokenEndpoint, "consoleapp", "super-secret-key");
+            var tokenClient = new TokenClient(discoveryResponse.TokenEndpoint, "consoleapptoken", "super-secret-key");
             var tokenResponse = await tokenClient.RequestClientCredentialsAsync("oauth-boilerplate");
 
             if (tokenResponse.IsError)
@@ -29,9 +32,9 @@ namespace Boilerplate.TestConsole
             }
 
             Console.WriteLine(tokenResponse.Json);
-            Console.WriteLine("\n\n");
+            Console.WriteLine("\n");
 
-            // Call api
+            // Call API using access token from our OAuth server
             var client = new HttpClient();
             client.SetBearerToken(tokenResponse.AccessToken);
 
