@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using IdentityServer4;
 using IdentityServer4.Models;
 
 namespace Boilerplate.OAuth
@@ -38,6 +39,26 @@ namespace Boilerplate.OAuth
                         new Secret("super-secret-key".Sha256())
                     },
                     AllowedScopes = { "oauth-boilerplate" }
+                },
+                new Client
+                {
+                    ClientId = "mvctoken",
+                    ClientName = "MVC Client",
+                    AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
+                    ClientSecrets =
+                    {
+                        new Secret("super-duper-secret-key".Sha256())
+                    },
+                    RedirectUris           = { "http://localhost:5002/signin-oidc" },
+                    PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
+                    AllowedScopes =
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "oauth-boilerplate"
+                    },
+                    AllowOfflineAccess = true,
+                    RequireConsent = false
                 }
             };
         }
