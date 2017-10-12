@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boilerplate.TestApi", "test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boilerplate.TestConsole", "test\Boilerplate.TestConsole\Boilerplate.TestConsole.csproj", "{DD9EDC65-808E-4B67-9472-2A11BD84130D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boilerplate.OAuth", "src\Boilerplate.OAuth\Boilerplate.OAuth.csproj", "{D52EA82C-4F39-4F9C-BFD7-57BCA517BC03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boilerplate.OAuth", "src\Boilerplate.Oauth\Boilerplate.OAuth.csproj", "{D52EA82C-4F39-4F9C-BFD7-57BCA517BC03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boilerplate.TestWeb", "test\Boilerplate.TestWeb\Boilerplate.TestWeb.csproj", "{84220E41-2875-4762-BA5E-993A21FF18FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{D52EA82C-4F39-4F9C-BFD7-57BCA517BC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D52EA82C-4F39-4F9C-BFD7-57BCA517BC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D52EA82C-4F39-4F9C-BFD7-57BCA517BC03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84220E41-2875-4762-BA5E-993A21FF18FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84220E41-2875-4762-BA5E-993A21FF18FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84220E41-2875-4762-BA5E-993A21FF18FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84220E41-2875-4762-BA5E-993A21FF18FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F4A8E913-A4DE-4464-921E-85E2E9B6FF07} = {BA06BB50-E1B2-47EC-862F-4FC89EAC00AE}
 		{DD9EDC65-808E-4B67-9472-2A11BD84130D} = {BA06BB50-E1B2-47EC-862F-4FC89EAC00AE}
+		{84220E41-2875-4762-BA5E-993A21FF18FB} = {BA06BB50-E1B2-47EC-862F-4FC89EAC00AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BFA917D8-563E-4EEE-BED2-D4CC3BA5EE0E}
